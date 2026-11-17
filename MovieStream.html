@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#141414">
+  <title>MovieStream | Discover Movies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top app-navbar">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand brand" href="#">MOVIE<span>STREAM</span></a>
+      <button class="navbar-toggler text-white border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-lg-4 me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#series">TV Shows</a></li>
+          <li class="nav-item"><a class="nav-link" href="#movies">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trending">Trending</a></li>
+          <li class="nav-item"><a class="nav-link" href="#my-list">My List</a></li>
+        </ul>
+        <div class="nav-tools d-flex align-items-center gap-3">
+          <button class="icon-button" aria-label="Search" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input id="searchInput" class="search-input" type="search" placeholder="Search movies..." aria-label="Search movies">
+          <button class="icon-button" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+          <div class="avatar">J</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="hero-shade"></div>
+      <div class="container-fluid hero-inner px-4 px-lg-5">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="n-mark">M</span> MOVIESTREAM ORIGINAL</p>
+          <p class="hero-kicker">THE NEW FEATURE PRESENTATION</p>
+          <h1>THE DARK<br>HORIZON</h1>
+          <div class="hero-meta">
+            <span class="match">98% Match</span><span>2026</span><span class="age">16+</span><span>2h 15m</span><span>Action / Sci-Fi</span>
+          </div>
+          <p class="hero-description">When a mysterious force threatens humanity, one unlikely hero must uncover the truth before the world falls into darkness.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn btn-light fw-bold px-4" id="heroPlay"><i class="fa-solid fa-play me-2"></i>Play</button>
+            <button class="btn btn-secondary info-button px-4" data-bs-toggle="modal" data-bs-target="#detailsModal"><i class="fa-solid fa-circle-info me-2"></i>More Info</button>
+          </div>
+        </div>
+        <div class="hero-bottom-note"><i class="fa-solid fa-volume-xmark me-2"></i>Previews play silently until you enable sound</div>
+      </div>
+    </section>
+
+    <div class="container-fluid content-area px-3 px-lg-5">
+      <section class="movie-section" id="trending">
+        <div class="section-heading"><div><p class="section-eyebrow">WHAT EVERYONE IS WATCHING</p><h2>Trending Now</h2></div><span class="section-count">01 / FEATURED COLLECTION</span></div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="movie-track">
+            <article class="movie-card" data-title="The Last Journey" data-duration="2h 08m" data-genre="Adventure · 2026" data-description="A daring expedition crosses an unforgiving wilderness in search of a lost civilisation." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700&q=85" alt="Mountain landscape poster for The Last Journey"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">TOP 10</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Last Journey</h3><div class="card-meta"><span class="match">96% Match</span><span>2h 08m</span><span class="age">13+</span></div><p>Adventure · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Midnight" data-duration="1h 52m" data-genre="Thriller · 2025" data-description="A radio host receives a call from someone who claims to know what happens next." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700&q=85" alt="Night sky poster for Midnight"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">NEW</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Midnight</h3><div class="card-meta"><span class="match">93% Match</span><span>1h 52m</span><span class="age">16+</span></div><p>Thriller · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Lost World" data-duration="2h 21m" data-genre="Fantasy · 2026" data-description="A group of explorers discovers a hidden world that time forgot." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=85" alt="Dramatic forest poster for Lost World"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Lost World</h3><div class="card-meta"><span class="match">91% Match</span><span>2h 21m</span><span class="age">13+</span></div><p>Fantasy · Adventure</p></div>
+            </article>
+            <article class="movie-card" data-title="Silent Forest" data-duration="1h 48m" data-genre="Mystery · 2025" data-description="A missing-person investigation leads a small town into a forest with a dark secret." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700&q=85" alt="Misty forest poster for Silent Forest"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Silent Forest</h3><div class="card-meta"><span class="match">89% Match</span><span>1h 48m</span><span class="age">16+</span></div><p>Mystery · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="Beyond Earth" data-duration="2h 04m" data-genre="Sci-Fi · 2026" data-description="A lone astronaut finds a signal that could change the future of humanity." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=85" alt="Earth from space poster for Beyond Earth"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Beyond Earth</h3><div class="card-meta"><span class="match">97% Match</span><span>2h 04m</span><span class="age">13+</span></div><p>Sci-Fi · Action</p></div>
+            </article>
+            <article class="movie-card" data-title="The Mountain" data-duration="1h 57m" data-genre="Drama · 2025" data-description="Two estranged siblings reunite for one final climb." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700&q=85" alt="Mountain lake poster for The Mountain"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Mountain</h3><div class="card-meta"><span class="match">88% Match</span><span>1h 57m</span><span class="age">13+</span></div><p>Drama · Adventure</p></div>
+            </article>
+            <article class="movie-card" data-title="Into the Wild" data-duration="2h 02m" data-genre="Adventure · 2025" data-description="A journey into the wilderness becomes a journey of self-discovery." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=700&q=85" alt="Sunlit forest poster for Into the Wild"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Into the Wild</h3><div class="card-meta"><span class="match">95% Match</span><span>2h 02m</span><span class="age">13+</span></div><p>Adventure · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="The Journey" data-duration="1h 55m" data-genre="Drama · 2026" data-description="A life-changing road trip brings unexpected friendships." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=85" alt="Mountain valley poster for The Journey"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Journey</h3><div class="card-meta"><span class="match">92% Match</span><span>1h 55m</span><span class="age">13+</span></div><p>Drama · Romance</p></div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="movie-section" id="movies">
+        <div class="section-heading"><div><p class="section-eyebrow">YOUR NEXT MOVIE NIGHT</p><h2>Popular Movies</h2></div><span class="section-count">02 / MOST WATCHED</span></div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="movie-track">
+            <article class="movie-card" data-title="Into the Wild" data-duration="2h 02m" data-genre="Adventure · 2025" data-description="A journey into the wilderness becomes a journey of self-discovery." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=700&q=85" alt="Sunlit forest poster for Into the Wild"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Into the Wild</h3><div class="card-meta"><span class="match">95% Match</span><span>2h 02m</span><span class="age">13+</span></div><p>Adventure · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="The Journey" data-duration="1h 55m" data-genre="Drama · 2026" data-description="A life-changing road trip brings unexpected friendships." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=85" alt="Mountain valley poster for The Journey"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Journey</h3><div class="card-meta"><span class="match">92% Match</span><span>1h 55m</span><span class="age">13+</span></div><p>Drama · Romance</p></div>
+            </article>
+            <article class="movie-card" data-title="Frozen Kingdom" data-duration="2h 11m" data-genre="Fantasy · 2025" data-description="A young leader must unite rival kingdoms against an ancient winter." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=85" alt="Snowy mountain poster for Frozen Kingdom"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Frozen Kingdom</h3><div class="card-meta"><span class="match">90% Match</span><span>2h 11m</span><span class="age">13+</span></div><p>Fantasy · Action</p></div>
+            </article>
+            <article class="movie-card" data-title="Green Valley" data-duration="1h 44m" data-genre="Romance · 2026" data-description="A quiet valley becomes the setting for an unexpected love story." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=700&q=85" alt="Green valley poster for Green Valley"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Green Valley</h3><div class="card-meta"><span class="match">87% Match</span><span>1h 44m</span><span class="age">13+</span></div><p>Romance · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="The Last Journey" data-duration="2h 08m" data-genre="Adventure · 2026" data-description="A daring expedition crosses an unforgiving wilderness in search of a lost civilisation." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700&q=85" alt="Mountain landscape poster for The Last Journey"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">TOP 10</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Last Journey</h3><div class="card-meta"><span class="match">96% Match</span><span>2h 08m</span><span class="age">13+</span></div><p>Adventure · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Midnight" data-duration="1h 52m" data-genre="Thriller · 2025" data-description="A radio host receives a call from someone who claims to know what happens next." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700&q=85" alt="Night sky poster for Midnight"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">NEW</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Midnight</h3><div class="card-meta"><span class="match">93% Match</span><span>1h 52m</span><span class="age">16+</span></div><p>Thriller · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Lost World" data-duration="2h 21m" data-genre="Fantasy · 2026" data-description="A group of explorers discovers a hidden world that time forgot." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=85" alt="Dramatic forest poster for Lost World"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Lost World</h3><div class="card-meta"><span class="match">91% Match</span><span>2h 21m</span><span class="age">13+</span></div><p>Fantasy · Adventure</p></div>
+            </article>
+            <article class="movie-card" data-title="Silent Forest" data-duration="1h 48m" data-genre="Mystery · 2025" data-description="A missing-person investigation leads a small town into a forest with a dark secret." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700&q=85" alt="Misty forest poster for Silent Forest"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Silent Forest</h3><div class="card-meta"><span class="match">89% Match</span><span>1h 48m</span><span class="age">16+</span></div><p>Mystery · Drama</p></div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="movie-section" id="series">
+        <div class="section-heading"><div><p class="section-eyebrow">KEEP WATCHING</p><h2>Series & Exclusives</h2></div><span class="section-count">03 / SERIES</span></div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="movie-track">
+            <article class="movie-card" data-title="Deep Forest" data-duration="8 Episodes" data-genre="Mystery Series · 2025" data-description="A ranger investigates strange events in a remote forest community." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=85" alt="Deep forest poster"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Deep Forest</h3><div class="card-meta"><span class="match">94% Match</span><span>8 Episodes</span><span class="age">16+</span></div><p>Mystery · Series</p></div>
+            </article>
+            <article class="movie-card" data-title="Desert Storm" data-duration="6 Episodes" data-genre="Action Series · 2026" data-description="An elite rescue team races against time across a vast desert." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=700&q=85" alt="Desert landscape poster"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Desert Storm</h3><div class="card-meta"><span class="match">90% Match</span><span>6 Episodes</span><span class="age">16+</span></div><p>Action · Series</p></div>
+            </article>
+            <article class="movie-card" data-title="Wild Escape" data-duration="10 Episodes" data-genre="Adventure Series · 2026" data-description="Strangers must work together to survive after becoming stranded." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=700&q=85" alt="Open wilderness poster"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Wild Escape</h3><div class="card-meta"><span class="match">92% Match</span><span>10 Episodes</span><span class="age">13+</span></div><p>Adventure · Series</p></div>
+            </article>
+            <article class="movie-card" data-title="The Last Journey" data-duration="2h 08m" data-genre="Adventure · 2026" data-description="A daring expedition crosses an unforgiving wilderness in search of a lost civilisation." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700&q=85" alt="Mountain landscape poster for The Last Journey"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">TOP 10</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Last Journey</h3><div class="card-meta"><span class="match">96% Match</span><span>2h 08m</span><span class="age">13+</span></div><p>Adventure · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Midnight" data-duration="1h 52m" data-genre="Thriller · 2025" data-description="A radio host receives a call from someone who claims to know what happens next." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700&q=85" alt="Night sky poster for Midnight"><video class="preview-video" muted loop playsinline preload="none"></video><span class="poster-tag">NEW</span><button class="sound-toggle" aria-label="Enable preview sound"><i class="fa-solid fa-volume-high"></i></button></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Midnight</h3><div class="card-meta"><span class="match">93% Match</span><span>1h 52m</span><span class="age">16+</span></div><p>Thriller · Mystery</p></div>
+            </article>
+            <article class="movie-card" data-title="Lost World" data-duration="2h 21m" data-genre="Fantasy · 2026" data-description="A group of explorers discovers a hidden world that time forgot." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=85" alt="Dramatic forest poster for Lost World"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Lost World</h3><div class="card-meta"><span class="match">91% Match</span><span>2h 21m</span><span class="age">13+</span></div><p>Fantasy · Adventure</p></div>
+            </article>
+            <article class="movie-card" data-title="Silent Forest" data-duration="1h 48m" data-genre="Mystery · 2025" data-description="A missing-person investigation leads a small town into a forest with a dark secret." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700&q=85" alt="Misty forest poster for Silent Forest"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Silent Forest</h3><div class="card-meta"><span class="match">89% Match</span><span>1h 48m</span><span class="age">16+</span></div><p>Mystery · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="Into the Wild" data-duration="2h 02m" data-genre="Adventure · 2025" data-description="A journey into the wilderness becomes a journey of self-discovery." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=700&q=85" alt="Sunlit forest poster for Into the Wild"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Into the Wild</h3><div class="card-meta"><span class="match">95% Match</span><span>2h 02m</span><span class="age">13+</span></div><p>Adventure · Drama</p></div>
+            </article>
+            <article class="movie-card" data-title="The Journey" data-duration="1h 55m" data-genre="Drama · 2026" data-description="A life-changing road trip brings unexpected friendships." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=85" alt="Mountain valley poster for The Journey"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>The Journey</h3><div class="card-meta"><span class="match">92% Match</span><span>1h 55m</span><span class="age">13+</span></div><p>Drama · Romance</p></div>
+            </article>
+            <article class="movie-card" data-title="Frozen Kingdom" data-duration="2h 11m" data-genre="Fantasy · 2025" data-description="A young leader must unite rival kingdoms against an ancient winter." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=85" alt="Snowy mountain poster for Frozen Kingdom"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Frozen Kingdom</h3><div class="card-meta"><span class="match">90% Match</span><span>2h 11m</span><span class="age">13+</span></div><p>Fantasy · Action</p></div>
+            </article>
+            <article class="movie-card" data-title="Green Valley" data-duration="1h 44m" data-genre="Romance · 2026" data-description="A quiet valley becomes the setting for an unexpected love story." data-trailer="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4">
+              <div class="poster-wrap"><img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=700&q=85" alt="Green valley poster for Green Valley"><video class="preview-video" muted loop playsinline preload="none"></video></div>
+              <div class="card-details"><div class="card-actions"><button class="round-action play-card" aria-label="Play trailer"><i class="fa-solid fa-play"></i></button><button class="round-action add-list" aria-label="Add to My List"><i class="fa-solid fa-plus"></i></button><button class="round-action more-info" aria-label="More information"><i class="fa-solid fa-chevron-down"></i></button></div><h3>Green Valley</h3><div class="card-meta"><span class="match">87% Match</span><span>1h 44m</span><span class="age">13+</span></div><p>Romance · Drama</p></div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="my-list-section" id="my-list">
+        <div><p class="section-eyebrow">SAVE IT FOR LATER</p><h2>My List</h2><p class="muted">Movies you add with the + button will appear here.</p></div>
+        <div id="savedMovies" class="saved-movies"><p class="empty-list">Your list is empty for now.</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer container-fluid px-4 px-lg-5">
+    <div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div>
+    <div class="footer-grid"><a href="#">Audio Description</a><a href="#">Help Centre</a><a href="#">Gift Cards</a><a href="#">Media Centre</a><a href="#">Investor Relations</a><a href="#">Terms of Use</a><a href="#">Privacy</a><a href="#">Contact Us</a></div>
+    <p>© 2026 MovieStream. Educational demo project.</p>
+  </footer>
+
+
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content details-modal">
+        <div class="modal-header border-0"><h2 class="modal-title fs-4" id="detailsTitle">THE DARK HORIZON</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body"><p class="match">98% Match</p><p>2026 · 2h 15m · Action / Sci-Fi · 16+</p><p>When a mysterious force threatens humanity, one unlikely hero must uncover the truth before the world falls into darkness.</p><p class="muted small">Demo project: replace this text and the preview video URLs with details and licensed trailers for your chosen films.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="trailerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content trailer-modal">
+        <div class="modal-header border-0"><h2 class="modal-title fs-5" id="trailerTitle">Trailer Preview</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body pt-0"><video id="modalVideo" controls playsinline></video><p class="muted small mt-2">Use trailer videos you own or are licensed to embed. Browser playback with sound requires a user click.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
