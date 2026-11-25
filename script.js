@@ -1,4 +1,4 @@
-// MovieStream interactions
+
 const tracks = document.querySelectorAll('.carousel-shell');
 
 tracks.forEach((shell) => {
@@ -6,7 +6,7 @@ tracks.forEach((shell) => {
   const prev = shell.querySelector('.carousel-arrow.prev');
   const next = shell.querySelector('.carousel-arrow.next');
 
-  // Move by approximately one card each time an arrow is clicked.
+
   const moveByCard = (direction) => {
     const card = track.querySelector('.movie-card');
     const gap = parseFloat(getComputedStyle(track).gap) || 14;
@@ -18,7 +18,7 @@ tracks.forEach((shell) => {
   next.addEventListener('click', () => moveByCard(1));
 });
 
-// Hover preview videos. They start muted because browsers block autoplay with sound.
+
 const cards = document.querySelectorAll('.movie-card');
 function stopPreview(card) {
   const video = card.querySelector('.preview-video');
@@ -37,11 +37,9 @@ cards.forEach((card) => {
 
   card.addEventListener('mouseenter', async () => {
     if (!trailerUrl) return;
-    // Set source only when needed to avoid downloading every video on page load.
     if (!video.src) video.src = trailerUrl;
     card.classList.add('previewing');
     try { await video.play(); } catch (error) {
-      // If autoplay is blocked, the poster remains visible until the user clicks Play.
       card.classList.remove('previewing');
     }
   });
@@ -66,7 +64,7 @@ cards.forEach((card) => {
   }
 });
 
-// Trailer modal: clicking Play opens the selected card's preview in a larger player.
+
 const trailerModalElement = document.getElementById('trailerModal');
 const trailerModal = new bootstrap.Modal(trailerModalElement);
 const modalVideo = document.getElementById('modalVideo');
@@ -80,7 +78,6 @@ document.querySelectorAll('.play-card').forEach((button) => {
     trailerTitle.textContent = `${card.dataset.title} — Preview`;
     trailerModal.show();
     modalVideo.play().catch(() => {
-      // User can press play in the modal if the browser blocks playback.
     });
   });
 });
@@ -91,7 +88,6 @@ trailerModalElement.addEventListener('hidden.bs.modal', () => {
   modalVideo.load();
 });
 
-// More-info buttons open a Bootstrap modal populated from the selected card.
 const detailsModalElement = document.getElementById('detailsModal');
 const detailsModal = new bootstrap.Modal(detailsModalElement);
 document.querySelectorAll('.more-info').forEach((button) => {
@@ -107,7 +103,7 @@ document.querySelectorAll('.more-info').forEach((button) => {
   });
 });
 
-// My List: add and remove movie titles in this browser session.
+
 const savedMovies = new Set();
 const savedContainer = document.getElementById('savedMovies');
 function renderSavedMovies() {
